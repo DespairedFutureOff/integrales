@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Expires" content="0" />
+	<link rel="stylesheet" href="style.css" />
+	<link rel="stylesheet" type="text/css" href="responsive.css">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Intégrales Marvel - Collections</title>
+	<link rel="icon" type="image/png" sizes="16x16" href="img/icon.png">
+</head>
+
+<body>
+	<header>
+		<section class="menu">
+			<span class="logopad"><img class="logo" src="img/logo.png" /></span>
+			<nav>
+				<section class="navbar">
+					<a href="index.php">Accueil</a>
+					<a href="listeCollections.html">Collections</a>
+				</section>
+			</nav>
+		</section>
+	</header>
+	<section class="banniereperso">
+		<h1>COLLECTIONS</h1>
+	</section>
+	<section class="buttons">
+		<button id="addCollection">Ajouter une collection</button>
+		<button id="deleteCollection">Supprimer une collection</button>
+	</section>
+	<form action="ajouterCollection.php" id="ajouterUneCollection" method="post" class="formulaire1" enctype="multipart/form-data">
+		<h2>Ajouter une collection</h2>
+		<input type="hidden" id="id" name="id"></input>
+		<section class="sousform">
+			<label for="name">Nom de la collection :</label>
+			<input id="name" type="text" placeholder="Spider-Man" name="name"></input>
+		</section>
+		<section class="sousform">
+			<label for="overlay">Illustration</label>
+			<input type="file" name="overlay" accept="image/*">
+		</section>
+		<section class="sousform">
+			<input type="reset" value="Annuler">
+			<input type="submit" value="Ajouter cette collection">
+		</section>
+	</form>
+	<form action="supprimerCollection.php" id="supprimerUneCollection" method="post" class="formulaire2" enctype="multipart/form-data">
+		<h2>Supprimer une collection</h2>
+		<section class="sousform">
+			<label for="num">Collection à supprimer :</label>
+			<select id="dateDel" name="date"></select>
+		</section>
+		<section class="sousform">
+			<input type="reset" value="Annuler">
+			<input type="submit" value="Supprimer cette collection">
+		</section>
+	</form>
+	<span id="persos">
+	</span>
+	<section class="end"></section>
+</body>
+<footer>
+	<section class="menu">
+		<span class="logopad"><img class="logo2" src="img/logo.png" /></span>
+		<nav>
+			<section class="navbar2">
+				<a href="remerciements.html">Remerciements</a>
+				<a class="nope">•</a>
+				<a href="infos.html">Infos</a>
+				<a class="nope">•</a>
+				<a href="discord.html">Discord</a>
+				<a class="nope">•</a>
+				<a href="contact.html">Contact</a>
+			</section>
+		</nav>
+	</section>
+</footer>
+<script type="module">
+import data from "../data/volumes.json" assert { type : "json" };
+let addCollection = document.getElementById("addCollection");
+addCollection.onclick=addACollection;
+let deleteCollection = document.getElementById("deleteCollection");
+deleteCollection.onclick=deleteACollection;
+function addACollection(){
+    let ajouterUneCollection = document.getElementById("ajouterUneCollection");
+	let supprimerUneCollection = document.getElementById("supprimerUneCollection");
+	if(ajouterUneCollection.style.display==="block"){
+		ajouterUneCollection.style.display = "none";
+		supprimerUneCollection.style.display = "none";
+	}
+	else{
+		ajouterUneCollection.style.display="block";
+		supprimerUneCollection.style.display = "none";
+	}
+}
+function deleteACollection(){
+	let ajouterUneCollection = document.getElementById("ajouterUneCollection");
+    let supprimerUneCollection = document.getElementById("supprimerUneCollection");
+	if(supprimerUneCollection.style.display==="block"){
+		ajouterUneCollection.style.display = "none";
+		supprimerUneCollection.style.display = "none";
+	}
+	else{
+		ajouterUneCollection.style.display = "none";
+		supprimerUneCollection.style.display="block";
+	}
+}
+/* Obtain amount of characters */
+function getCharactersAmount(){
+    let nbCharacters = Object.keys(data).length;
+    return nbCharacters;
+}
+let nbCharacters = getCharactersAmount();
+let persos = document.getElementById("persos");
+/* Count to make sure there is the correct amount of characters in a row */
+let countElement = 0;
+let j=0;
+let sectionPersonnages=[];
+sectionPersonnages[j] = document.createElement('section');
+sectionPersonnages[j].setAttribute("class","personnages");
+persos.appendChild(sectionPersonnages[j]);
+let date = document.getElementById("dateDel");
+//	First option is blank
+let OptionOne = document.createElement("option");
+date.appendChild(OptionOne);
+OptionOne.value=0;
+OptionOne.innerText="----------------";
+for(let i=0; i<nbCharacters;i++){
+    //  Adding a new row in case of 4 characters in the current row
+    if (countElement==4){
+        j=j+1;
+        countElement = 0;
+        sectionPersonnages[j] = document.createElement('section');
+        sectionPersonnages[j].setAttribute("class","personnages");
+        persos.appendChild(sectionPersonnages[j]);
+    }
+    //  Adding new character to the current row
+    countElement++;
+    let sectionPersonnage1=[];
+    sectionPersonnage1[i] = document.createElement('section');
+    sectionPersonnage1[i].setAttribute("class","personnage");
+    sectionPersonnages[j].appendChild(sectionPersonnage1[i]);
+    let a;
+    a = document.createElement('a');
+    a.setAttribute("href","volumes.html?"+data[i].link);
+    sectionPersonnage1[i].appendChild(a);
+    let image;
+    image = document.createElement('img');
+    image.setAttribute("src",data[i].overlay);
+    a.appendChild(image);
+    let name;
+    name = document.createElement('p');
+    name.innerHTML=data[i].id.toUpperCase();
+    a.appendChild(name);
+	// Adding volume to selectable option in the delete part
+	let option = document.createElement("option");
+	date.appendChild(option);
+	option.value=data[i].id.toUpperCase();
+	option.innerText=data[i].id.toUpperCase();
+}
+</script>

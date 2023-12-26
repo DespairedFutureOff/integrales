@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Expires" content="0" />
+	<link rel="stylesheet" href="style.css" />
+	<link rel="stylesheet" type="text/css" href="responsive.css">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Intégrales Marvel - Collections</title>
+	<link rel="icon" type="image/png" sizes="16x16" href="img/icon.png">
+</head>
+<body>
+	<header>
+		<section class="menu">
+			<span class="logopad"><img class="logo" src="img/logo.png" /></span>
+			<nav>
+				<section class="navbar">
+					<a href="index.php">Accueil</a>
+					<a href="listeCollections.html">Collections</a>
+				</section>
+			</nav>
+		</section>
+	</header>
+	<section class="banniereperso" id="serie">
+	</section>
+	<section class="buttons">
+		<button id="addVolume">Ajouter un volume à cette collection</button>
+		<button id="deleteVolume">Supprimer un volume de cette collection</button>
+	</section>
+	<form action="ajouterVolume.php" id="ajouterUnVolume" method="post" class="formulaire1" enctype="multipart/form-data">
+		<h2>Ajouter un volume</h2>
+		<input type="hidden" id="id" name="id"></input>
+		<section class="sousform">
+			<label for="num">Numéro du volume :</label>
+			<input id="num" type="text" placeholder="1" name="num"></input>
+		</section>
+		<section class="sousform">
+			<label for="date">Nom du volume</label>
+			<input id="date" type="text" placeholder="1962-1963" name="date"></input>
+		</section>
+		<section class="sousform">
+			<label for="sortie">Date de parution</label>
+			<input id="sortie" type="text" placeholder="01/01/1970" name="sortie"></input>
+		</section>
+		<section class="sousform">
+			<label for="overlay">Illustration</label>
+			<input type="file" name="overlay" accept="image/*">
+		</section>
+		<section class="sousform">
+			<input type="reset" value="Annuler">
+			<input type="submit" value="Ajouter le volume">
+		</section>
+	</form>
+	<form action="supprimerVolume.php" id="supprimerVolume" method="post" class="formulaire2" enctype="multipart/form-data">
+		<h2>Supprimer un volume</h2>
+		<input type="hidden" id="idDel" name="id"></input>
+		<section class="sousform">
+			<label for="num">Numéro à supprimer :</label>
+			<select id="dateDel" name="date"></select>
+		</section>
+		<section class="sousform">
+			<input type="reset" value="Annuler">
+			<input type="submit" value="Supprimer ce volume">
+		</section>
+	</form>
+	<span id="persos">
+	</span>
+	<section class="end"></section>
+</body>
+<footer>
+	<section class="menu">
+		<span class="logopad"><img class="logo2" src="img/logo.png" /></span>
+		<nav>
+			<section class="navbar2">
+				<a href="remerciements.html">Remerciements</a>
+				<a class="nope">•</a>
+				<a href="infos.html">Infos</a>
+				<a class="nope">•</a>
+				<a href="discord.html">Discord</a>
+				<a class="nope">•</a>
+				<a href="contact.html">Contact</a>
+			</section>
+		</nav>
+	</section>
+</footer>
+<script type="module">
+import filePath from "../data/volumes.json" assert { type : "json" };
+var MyData= filePath;
+let parameters = location.search.substring(1);
+let myId = document.getElementById("id");
+myId.value = parameters;
+myId = document.getElementById("idDel");
+myId.value = parameters;
+/* Obtain amount of characters */
+function getCharactersAmount(){
+    let nbCharacters = Object.keys(filePath).length;
+    return nbCharacters;
+}
+let addVolume = document.getElementById("addVolume");
+addVolume.onclick=addAVolume;
+let deleteVolume = document.getElementById("deleteVolume");
+deleteVolume.onclick=deleteAVolume;
+function addAVolume(){
+    let ajouterUnVolume = document.getElementById("ajouterUnVolume");
+	let supprimerVolume = document.getElementById("supprimerVolume");
+	if(ajouterUnVolume.style.display==="block"){
+		ajouterUnVolume.style.display = "none";
+		supprimerVolume.style.display = "none";
+	}
+	else{
+		ajouterUnVolume.style.display="block";
+		supprimerVolume.style.display = "none";
+	}
+}
+function deleteAVolume(){
+	let ajouterUnVolume = document.getElementById("ajouterUnVolume");
+    let supprimerVolume = document.getElementById("supprimerVolume");
+	if(supprimerVolume.style.display==="block"){
+		ajouterUnVolume.style.display = "none";
+		supprimerVolume.style.display = "none";
+	}
+	else{
+		ajouterUnVolume.style.display = "none";
+		supprimerVolume.style.display="block";
+	}
+}
+let nbCollections = getCharactersAmount();
+let persos = document.getElementById("persos");
+let serie = document.getElementById("serie");
+let createVolume = document.getElementById("createVolume");
+/* Count to make sure there is the correct amount of volumes in a row */
+let countElement = 0;
+let j=0;
+let sectionPersonnages=[];
+sectionPersonnages[j] = document.createElement('section');
+sectionPersonnages[j].setAttribute("class","personnages");
+persos.appendChild(sectionPersonnages[j]);
+let date = document.getElementById("dateDel");
+//	First option is blank
+let OptionOne = document.createElement("option");
+date.appendChild(OptionOne);
+OptionOne.value=0;
+OptionOne.innerText="----------------";
+let h1 = document.createElement('h1');
+serie.append(h1);
+for(let i=0; i<nbCollections;i++){
+    // Searching correct collections
+    if (filePath[i].link == parameters){
+		h1.innerHTML=filePath[i].id.toUpperCase();
+        let l=0;
+        //  Searching volumes
+        for(let k=0; k<filePath[i].volumes.length;k++){
+            //  Adding a new row in case of 4 characters in the current row
+            if (countElement==4){
+                l=l+1;
+                countElement = 0;
+                sectionPersonnages[l] = document.createElement('section');
+                sectionPersonnages[l].setAttribute("class","personnages");
+                persos.appendChild(sectionPersonnages[l]);
+            }
+            //  Adding new volume to the current row
+            countElement++;
+            let sectionPersonnage1=[];
+            sectionPersonnage1[j] = document.createElement('section');
+            sectionPersonnage1[j].setAttribute("class","personnage");
+            sectionPersonnages[l].appendChild(sectionPersonnage1[j]);
+            let a;
+            a = document.createElement('a');
+            sectionPersonnage1[j].appendChild(a);
+            let image;
+            image = document.createElement('img');
+            image.setAttribute("src",filePath[j].volumes[k].overlay);
+            a.appendChild(image);
+            let name;
+            name = document.createElement('p');
+            name.innerHTML=filePath[j].volumes[k].date;
+            a.appendChild(name);
+			// Adding volume to selectable option in the delete part
+			let option = document.createElement("option");
+			date.appendChild(option);
+			option.value=filePath[j].volumes[k].date;
+			option.innerText=filePath[j].volumes[k].date;
+        }
+    }
+}
+
+</script>

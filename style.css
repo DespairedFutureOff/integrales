@@ -1,0 +1,1515 @@
+@font-face {
+	font-family: "Futura";
+	src: url("fonts/Futura.ttf");
+}
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900,900i');
+
+@font-face {
+	font-family: "Trebuchet MS";
+	src: url("fonts/Trebuchet.ttf");
+}
+
+/*HEADER*/
+header {
+	background: black;
+}
+
+footer {
+	background: black;
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+.active {
+	background-color: #45d6ab;
+}
+
+.logo {
+	width: 50%;
+}
+
+.logopad {
+	padding-left: 125px;
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+.logo2 {
+	width: 30%;
+}
+
+:root {
+	--navheight: 30px;
+}
+
+.menu {
+	display: flex;
+	justify-content: space-between;
+}
+
+nav {
+	font-family: 'Trebuchet MS';
+	font-weight: bold;
+}
+
+.navbar {
+	display: flex;
+	padding-right: 75px;
+}
+
+.navbar a {
+	text-decoration: none;
+	color: white;
+	padding-left: 50px;
+	padding-right: 50px;
+	padding-top: 50px;
+	font-size: 20px;
+}
+
+.navbar a:hover {
+	color: rgb(240, 195, 0);
+}
+
+.maisaled {
+	padding-top: 50px;
+	position: relative;
+	display: inline-block;
+}
+
+.content {
+	display: none;
+	position: absolute;
+	background-color: black;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+	z-index: 1;
+}
+
+.content a {
+	color: white;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+}
+
+.maisaled:hover .content {
+	display: block;
+}
+
+.navbar2 {
+	display: flex;
+	padding-right: 75px;
+}
+
+.navbar2 .nope {
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+.navbar2 a {
+	text-decoration: none;
+	color: white;
+	padding-left: 25px;
+	padding-right: 25px;
+	padding-top: 50px;
+	font-size: 15px;
+}
+
+.navbar2 a:hover {
+	color: rgb(240, 195, 0);
+}
+
+.flèche {
+	text-align: center;
+}
+
+/*BODY*/
+body {
+	font-family: "Futura", serif;
+}
+
+body,
+ul {
+	margin: 0;
+	padding: 0;
+	background-color: rgb(27, 29, 31);
+}
+
+.slide1 {
+	display: flex;
+	justify-content: space-between;
+	background-image: url("img/kmtest.png");
+	padding-top: 75px;
+	padding-bottom: 0px;
+	padding-left: 80px;
+	padding-right: 80px;
+	border: none;
+}
+
+.banniereperso {
+	display: flex;
+	justify-content: center;
+	background: linear-gradient(to right, rgb(20, 52, 164), rgb(100, 149, 237));
+	padding-bottom: 25px;
+	letter-spacing: 4px;
+}
+
+.banniereperso h1 {
+	font-size: 38px;
+	padding-top: 25px;
+	color: white;
+}
+
+.bannierepouv {
+	display: flex;
+	justify-content: center;
+	background: linear-gradient(to right, rgb(145, 65, 1), rgb(240, 243, 50));
+	padding-bottom: 25px;
+	letter-spacing: 4px;
+}
+
+.bannierepouv h1 {
+	font-size: 38px;
+	padding-top: 25px;
+	color: white;
+}
+
+.bannierespecies {
+	display: flex;
+	justify-content: center;
+	background: linear-gradient(to right, rgb(68, 1, 145), rgb(227, 50, 243));
+	padding-bottom: 25px;
+	letter-spacing: 4px;
+}
+
+.bannierespecies h1 {
+	font-size: 38px;
+	padding-top: 25px;
+	color: white;
+}
+
+.bannierechrono {
+	display: flex;
+	justify-content: center;
+	background: linear-gradient(to right, rgb(1, 145, 102), rgb(127, 243, 50));
+	padding-bottom: 25px;
+	letter-spacing: 4px;
+}
+
+.bannierechrono h1 {
+	font-size: 38px;
+	padding-top: 25px;
+	color: white;
+}
+
+.bannierelieux {
+	display: flex;
+	justify-content: center;
+	background: linear-gradient(to right, rgb(1, 3, 145), rgb(50, 150, 243));
+	padding-bottom: 25px;
+	letter-spacing: 4px;
+}
+
+.bannierelieux h1 {
+	font-size: 38px;
+	padding-top: 25px;
+	color: white;
+}
+
+.bannierechap {
+	display: flex;
+	justify-content: center;
+	background: linear-gradient(to right, rgb(7, 73, 5), rgb(34, 233, 34));
+	padding-bottom: 25px;
+	letter-spacing: 4px;
+}
+
+.bannierechap h1 {
+	font-size: 38px;
+	padding-top: 25px;
+	color: white;
+}
+
+.bannierecs {
+	display: flex;
+	justify-content: center;
+	background: linear-gradient(to right, rgb(105, 11, 11), rgb(204, 23, 23));
+	padding-bottom: 25px;
+	letter-spacing: 4px;
+}
+
+.bannierecs h1 {
+	font-size: 38px;
+	padding-top: 25px;
+	color: white;
+}
+
+.banniereepoque {
+	display: flex;
+	justify-content: center;
+	background: linear-gradient(to right, rgb(96, 28, 136), rgb(167, 131, 224));
+	padding-bottom: 25px;
+	letter-spacing: 4px;
+}
+
+.banniereepoque h1 {
+	font-size: 38px;
+	padding-top: 25px;
+	color: white;
+}
+
+.bannieregroupe {
+	display: flex;
+	justify-content: center;
+	background: linear-gradient(to right, #BF55EC, #BE90D4);
+	padding-bottom: 25px;
+	letter-spacing: 4px;
+	margin-top: 150px;
+}
+
+.bannieregroupe h1 {
+	font-size: 38px;
+	padding-top: 25px;
+	color: white;
+}
+
+.bannieregroupe2 {
+	display: flex;
+	justify-content: center;
+	background: linear-gradient(to right, #BF55EC, #BE90D4);
+	padding-bottom: 25px;
+	letter-spacing: 4px;
+}
+
+.bannieregroupe2 h1 {
+	font-size: 38px;
+	padding-top: 25px;
+	color: white;
+}
+
+.banniereconst {
+	display: flex;
+	justify-content: center;
+	background: linear-gradient(to right, #F9690E, #F5D76E);
+	padding-bottom: 25px;
+	letter-spacing: 4px;
+	margin-top: 150px;
+}
+
+.banniereconst h1 {
+	font-size: 38px;
+	padding-top: 25px;
+	color: white;
+}
+
+.bannierewiki {
+	display: flex;
+	justify-content: center;
+	background: linear-gradient(to right, green, lime);
+	padding-bottom: 25px;
+	letter-spacing: 4px;
+}
+
+.bannierewiki h1 {
+	font-size: 38px;
+	padding-top: 25px;
+	color: white;
+}
+
+.slide1 h1 {
+	font-size: 38px;
+	padding-top: 75px;
+	color: white;
+}
+
+.slide1 p {
+	font-size: 28px;
+	margin-right: 450px;
+	color: white;
+}
+
+.slide3 {
+	display: flex;
+	justify-content: space-between;
+	background: linear-gradient(to right, rgb(6, 24, 78), rgb(123, 135, 167));
+	padding-top: 75px;
+	padding-bottom: 0px;
+	padding-left: 80px;
+	padding-right: 80px;
+	border:none;
+}
+
+.slide3 h1 {
+	font-size: 38px;
+	padding-top: 25px;
+	color: white;
+}
+
+.slide3 p {
+	font-size: 28px;
+	margin-right: 450px;
+	color: white;
+}
+
+.couv2 {
+	max-width: 400px;
+	padding-right: 150px;
+	filter: drop-shadow(-30px 0px 4px rgba(0, 0, 0, 0.6));
+}
+
+.couv {
+	max-width: 400px;
+	padding-right: 150px;
+	filter: drop-shadow(30px 0px 4px rgba(0, 0, 0, 0.6));
+}
+
+.couv3 {
+	padding-top: 75px;
+	max-width: 400px;
+	padding-right: 150px;
+	filter: drop-shadow(30px -30px 4px rgba(0, 0, 0, 0.2));
+}
+
+.lireinfos {
+	background-color: darkred;
+	box-align: center;
+	text-align: center;
+	border: solid crimson;
+	width: 180px;
+	margin-top: 50px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-right: 20px;
+	padding-left: 20px;
+	border-radius: 10px;
+	margin-bottom: 80px;
+	color: white;
+	font-size: 25px;
+	text-decoration: none;
+}
+
+.aled {
+	padding-bottom: 20px;
+}
+
+.lireinfos:hover {
+	color: rgb(240, 195, 0);
+	background-color: crimson;
+	border: solid darkred;
+}
+
+.part2 {
+	text-align: right;
+}
+
+.slide2 {
+	display: flex;
+	justify-content: space-between;
+	background: linear-gradient(to right, rgb(102, 2, 252), rgb(220, 127, 236));
+	padding-top: 75px;
+	padding-bottom: 0px;
+	padding-left: 80px;
+	padding-right: 80px;
+}
+
+.slide2 h1 {
+	font-size: 38px;
+	padding-top: 30px;
+}
+
+.slide2 p {
+	font-size: 28px;
+	margin-left: 450px;
+}
+
+.corpswiki {
+	display: flex;
+	justify-content: space-between;
+	background: rgb(27, 29, 31);
+	padding-top: 75px;
+	padding-bottom: 150px;
+	padding-left: 80px;
+	padding-right: 80px;
+}
+
+.disamB {
+	border: solid 2px white;
+	border-radius: 10px;
+	background-color: #232b2b;
+	text-decoration: none;
+	color: white;
+	font-size: 20px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-left: 10px;
+	padding-right: 10px;
+	font-family: "Futura";
+	letter-spacing: 1px;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+.disamB:hover {
+	color: darkred;
+	background-color: rgb(240, 195, 0);
+	cursor: pointer;
+}
+
+.disam1 {
+	display: block;
+}
+
+.disam2 {
+	display: none;
+}
+
+.disam3 {
+	display: none;
+}
+
+.disam4 {
+	display: none;
+}
+
+.disam5 {
+	display: none;
+}
+
+.disam6 {
+	display: none;
+}
+
+.disam7 {
+	display: none;
+}
+
+.disam8 {
+	display: none;
+}
+
+.disam9 {
+	display: none;
+}
+
+.wiki .chemin {
+	color: grey;
+}
+
+.wiki2 .chemin {
+	color: grey;
+}
+.imagepls img{
+	width:120px;
+	margin-left: 120px;
+}
+.personnage {
+	font-size: 35px;
+	border-radius: 10px;
+	margin-left: 20px;
+	margin-right: 20px;
+	font-family: "Futura";
+	transition: transform .4s;
+}
+.personnage img{
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+}
+.personnage p {
+	margin: 10px;
+	font-family: "Futura";
+	text-align: center;
+}
+
+.personnage a {
+	text-decoration: none;
+	color: white;
+	font-family: "Futura";
+}
+
+.persochap {
+	font-family: "Futura";
+	color: white;
+	text-decoration: none;
+}
+
+.details {
+	font-size: 15px;
+	color: lightskyblue;
+}
+
+.personnage a:hover {
+	color: rgb(240, 195, 0);
+}
+
+.personnage:hover {
+	background-color: #232b2b;
+	transform: scale(1.08);
+}
+
+.personnage a:hover .details {
+	color: rgb(240, 195, 0);
+}
+
+.groupe {
+	border: solid white 3px;
+	font-size: 35px;
+	text-align: center;
+}
+
+.groupe a {
+	text-decoration: none;
+	color: white;
+}
+
+.groupe a:hover {
+	color: rgb(240, 195, 0);
+}
+
+.groupes {
+	padding-left: 300px;
+	padding-right: 300px;
+	padding-top: 75px;
+	padding-bottom: 25px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.constellations img {
+	width: 200px;
+}
+
+.imagepls {
+	display: flex;
+	align-items: left;
+}
+
+.imagepls .chara {
+	border: 5px solid rgb(22, 21, 21);
+}
+
+.imagepls .trivia {
+	width: 300px;
+	border: 5px solid rgb(22, 21, 21);
+	margin-left: 70px;
+}
+
+.chara {
+	max-width: 150px;
+}
+
+.constellation {
+	border: solid white 3px;
+	font-size: 35px;
+	text-align: center;
+}
+
+.constellation a {
+	text-decoration: none;
+	color: white;
+}
+
+.constellation a:hover {
+	color: rgb(240, 195, 0);
+}
+
+.constellations {
+	padding-left: 300px;
+	padding-right: 300px;
+	padding-top: 75px;
+	padding-bottom: 25px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.groupes img {
+	width: 200px;
+}
+
+.mais {
+	display: flex;
+}
+
+.personnages {
+	padding-left: 300px;
+	padding-right: 300px;
+	padding-top: 15px;
+	padding-bottom: 25px;
+	display: flex;
+	justify-content: center;
+}
+
+.Bdisam {
+	padding-left: 300px;
+	padding-right: 300px;
+	padding-top: 15px;
+	padding-bottom: 25px;
+	display: flex;
+	justify-content: center;
+}
+.genea {
+	padding-left: 300px;
+	padding-right: 300px;
+	padding-top: 15px;
+	padding-bottom: 25px;
+	display: flex;
+	justify-content: center;
+}
+.events{ 
+	display:block;
+	flex-direction: row;
+}
+.Bdisam button{
+	text-decoration: none;
+}
+.groupepres {
+	padding-left: 300px;
+	padding-right: 300px;
+	padding-top: 75px;
+	padding-bottom: 25px;
+	display: flex;
+	justify-content: space-between;
+	font-size: 25px;
+}
+
+.contenuwikigroupe {
+	padding-left: 300px;
+	padding-right: 300px;
+	padding-top: 75px;
+	padding-bottom: 25px;
+	color: white;
+	font-size: 38px;
+	letter-spacing: 4px;
+}
+
+.groupepres img {
+	width: 400px;
+	padding-left: 250px;
+	max-width: 400px;
+}
+
+.personnages img {
+	width: 300px;
+}
+
+.groupepres h4 {
+	font-size: 22px;
+}
+
+.groupepres h5 {
+	font-size: 22px;
+}
+
+.warning {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: linear-gradient(to right, red, rgb(217, 84, 84));
+	letter-spacing: 2px;
+	font-size: 20px;
+	color: white;
+	flex-direction: column;
+	padding-bottom: 25px;
+}
+
+.warning h1 {
+	font-size: 38px;
+	letter-spacing: 4px;
+	padding-top: 25px;
+}
+
+.groupepres {
+	display: flex;
+	align-items: center;
+	color: white;
+}
+
+.persopres {
+	display: flex;
+	color: white;
+	justify-content: center;
+}
+
+.infos {
+	display: flex;
+	align-items: center;
+}
+
+.infos h4 {
+	padding-left: 5px;
+	font-weight: unset;
+	letter-spacing: 1px;
+}
+
+.infos h5 {
+	padding-left: 5px;
+	letter-spacing: 2px;
+}
+.match {
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	padding: 0px;
+}
+.match h4{
+	padding: 0px;
+	margin: 0px;
+	margin-top: 50px;
+}
+.match h5{
+	padding: 0px;
+	margin: 0px;
+}
+
+
+.presgroupe {
+	padding-right: 350px;
+}
+
+.video {
+	padding-top:25px;
+	display:flex;
+	justify-content: center;
+}
+
+
+.imgperso img {
+	height: 300px;
+}
+
+/*TO CHANGE (CHAR. TABLE)*/
+
+.asidelol {
+	float: right;
+	padding-right: 250px;
+}
+
+.présentation table {
+	color: white;
+	font-size: 22px;
+	background-color: #232b2b;
+	width: 100%;
+	margin: none;
+	border: none;
+}
+
+.présentation ul {
+	background-color: #0d0d0d;
+}
+
+.présentation a {
+	color: #ADD8E6;
+}
+
+.présentation a:hover {
+	color: rgb(240, 195, 0);
+}
+
+.présentation img {
+	width: 400px;
+}
+
+.boutonannee {
+	cursor: pointer;
+	border: #0d172a;
+	background: linear-gradient(black, #232b2b, black);
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.annee a {
+	color: white;
+}
+
+.annee {
+	display: flex;
+	justify-content: center;
+}
+
+.bannierewikip {
+	display: flex;
+	justify-content: center;
+	background: linear-gradient(to right, rgb(0, 0, 0), rgb(235, 7, 7), rgb(0, 0, 0));
+	letter-spacing: 1px;
+	margin: 0;
+}
+
+.bannierewikip h1 {
+	color: white;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.quote {
+	background-color: #ecebeb;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 7px;
+	padding-bottom: 7px;
+	margin-right: 165px;
+	font-size: 23px;
+	line-height: 1em;
+	border-left: 10px solid rgb(64, 66, 194);
+	margin-bottom: 20px;
+}
+
+.quote .source {
+	color: rgb(121, 5, 5);
+	font-size: 20px;
+}
+
+.quote p {
+	color: black;
+	font-style: italic;
+}
+
+.epoques {
+	border: solid 0px white;
+	background-color: #232b2b;
+	text-decoration: none;
+	color: white;
+	font-size: 20px;
+	display: inline-block;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	width: 50%;
+	margin: 0px;
+	font-family: "Futura";
+	letter-spacing: 1px;
+}
+
+.formulaire1{
+	background-color: rgba(0, 0, 0, 0.678);
+	color:white;
+	margin:50px;
+	border-radius: 10px;
+	text-align: center;
+	justify-content: center;
+	display:none;
+	padding: 5px;	
+}
+
+.formulaire2{
+	background-color: rgba(0, 0, 0, 0.678);
+	color:white;
+	margin:50px;
+	border-radius: 10px;
+	text-align: center;
+	justify-content: center;
+	display:none;
+	padding: 5px;	
+}
+
+.sousform{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin:20px;
+}
+.sousform h4{
+	padding:10px;
+	font-size: 24px;
+}
+
+.sousform input{
+	margin:10px;
+	font-size: 24px;
+}
+
+.sousform p{
+	margin:10px;
+}
+
+.sousform button{
+	margin:10px;
+}
+
+
+
+.formulaire1 h2{
+	font-size: 32px;
+}
+.formulaire2 h2{
+	font-size: 32px;
+}
+.ongletsages {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	max-width: 400px;
+	margin: 0px;
+}
+
+.buttons {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	padding-top:20px;
+	padding-right:10px;
+	padding-left:10px;
+	width: 100%;
+}
+.buttons button{
+	margin-right:20px;
+	margin-left:0px;
+	border:none;
+	background-color: lightslategray;
+	color:white;
+	padding:5px;
+	border-radius: 2%;
+}
+
+.epoques:hover {
+	color: darkred;
+	background-color: rgb(240, 195, 0);
+	cursor: pointer;
+}
+
+.pouvoirs {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 18px;
+	text-align: center;
+}
+
+.pouvoirs section {
+	padding-left: 12px;
+	padding-right: 12px;
+}
+
+.pouve {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+.wiki p {
+	font-family: Arial;
+}
+
+.wiki .persochap {
+	font-family: "Futura";
+}
+
+.wiki .personnage a:hover .persochap {
+	color: rgb(240, 195, 0);
+}
+
+.wiki .details {
+	font-family: "Futura";
+}
+
+.wiki a {
+	text-decoration: none;
+	color: #add8e6;
+}
+
+.wiki a:hover {
+	color: rgb(240, 195, 0);
+}
+
+.wiki {
+	width: 60%;
+	color: white;
+	font-size: 120%;
+	padding-left: 250px;
+}
+
+.wiki2 {
+	width: 60%;
+	color: white;
+	font-size: 120%;
+	margin-left: 400px;
+	padding-right: 10px;
+}
+
+.wiki2 p {
+	font-family: Arial;
+}
+
+.wiki2 .persochap {
+	font-family: "Futura";
+}
+
+.wiki2 .personnage a:hover .persochap {
+	color: rgb(240, 195, 0);
+}
+
+.wiki2 .details {
+	font-family: "Futura";
+}
+
+.wiki2 a {
+	text-decoration: none;
+	color: #add8e6;
+}
+
+.wiki2 a:hover {
+	color: rgb(240, 195, 0);
+}
+
+.asidelol a {
+	text-decoration: none;
+}
+
+.navigation {
+	display: flex;
+	flex-direction: column;
+	border: solid 1px grey;
+	margin-top: 10px;
+	margin-right: 800px;
+}
+
+.navigation h2 {
+	text-align: center;
+}
+
+.sommaireB {
+	color: #add8e6;
+	background-color: #1b1d1f;
+	border: none;
+}
+
+.sommaireB:hover {
+	color: rgb(240, 195, 0);
+	cursor: pointer;
+}
+
+.sommaire {
+	display: flex;
+	text-align: left;
+	margin-left: 0px;
+}
+
+.sous-titre {
+	font-size: 140%;
+	padding-top: 5px;
+}
+
+.biologie h2 {
+	color: white;
+	text-align: center;
+	background: linear-gradient(to right, rgb(0, 0, 0), rgb(235, 7, 7), rgb(0, 0, 0));
+	padding-top: 5px;
+	padding-bottom: 5px;
+	letter-spacing: 2px;
+	margin: 0px;
+	margin-top: 20px;
+}
+
+.présentation table td {
+	border: none;
+	margin: 0px;
+}
+
+.présentation table .light {
+	width: 65%;
+	padding-left: 5px;
+	background-color: #667a7a;
+}
+
+.présentation table .light2 {
+	padding-left: 5px;
+	width: 79%;
+	background-color: #667a7a;
+}
+
+.présentation table img {
+	width: 80px;
+	padding-top: 3px;
+	margin: 0px;
+}
+
+.persopresentation h2 {
+	color: #c03538;
+	padding-left: 8px;
+	padding-top: 2px;
+	padding-bottom: 3px;
+	line-height: 1em;
+	border-bottom: 2px solid #C12025;
+	border-left: 10px solid #C12025;
+	margin-bottom: 20px;
+	font-size: 30px;
+}
+
+.wiki2 .persopresentation h2 {
+	color: #eb2c25;
+	padding-left: 8px;
+	padding-top: 2px;
+	padding-bottom: 3px;
+	line-height: 1em;
+	border-bottom: 2px solid #d81b21;
+	border-left: 10px solid #d81b21;
+	margin-bottom: 20px;
+	font-size: 30px;
+}
+
+.persopresentation h3 {
+	color: #1adb44;
+	padding-top: 2px;
+	padding-bottom: 3px;
+	line-height: 1em;
+	border-bottom: 2px solid #1adb44;
+	margin-bottom: 20px;
+	font-size: 26px;
+}
+
+.persopresentation h4 {
+	color: white;
+	padding-left: 25px;
+	padding-top: 2px;
+	padding-bottom: 3px;
+	line-height: 1em;
+	margin-bottom: 20px;
+	font-size: 26px;
+}
+
+.entourage tr:hover {
+	color: darkred;
+	background-color: rgb(240, 195, 0);
+}
+
+.entourage tr:hover .light2 {
+	background-color: rgb(240, 195, 0);
+	cursor: default;
+}
+
+.entourage tr:hover .light2 a {
+	color: darkred;
+}
+
+.entourage tr:hover .light2 a:hover {
+	color: rgb(0, 139, 116);
+}
+
+.entourage .light2 {
+	border-left: solid 4px darkred;
+}
+
+.entourage td:not(.light2) img {
+	vertical-align: bottom;
+	padding:0px;
+	margin:0px;
+}
+
+.barres {
+	color: grey;
+	padding-right: 10px;
+}
+
+.wikisize {
+	margin-right: 140px;
+	padding-right: 10px;
+}
+.wikisizeh {
+	margin-right: 140px;
+	padding-right: 10px;
+}
+.tba {
+	font-size: 25px;
+}
+
+.persopresentation .spec {
+	color: #9e72d8;
+	padding-top: 2px;
+	padding-bottom: 3px;
+	line-height: 1em;
+	border-bottom: 2px solid #9e72d8;
+	margin-bottom: 20px;
+	font-size: 26px;
+}
+
+.end {
+	display: flex;
+	padding-bottom: 50px;
+}
+
+.ongletsages img {
+	border: solid 3px rgb(22, 21, 21);
+}
+
+.infos table {
+	border: solid 3px rgb(22, 21, 21);
+}
+
+.entourage table {
+	border: solid 3px rgb(22, 21, 21);
+}
+
+.date {
+	color: white;
+	padding-top: 2px;
+	padding-bottom: 3px;
+	line-height: 1em;
+	margin-bottom: 20px;
+	font-size: 35px;
+}
+
+.chapitres {
+	display: flex;
+	justify-content: space-between;
+	background-color: #0d0d0d;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.chapitres a {
+	color: white;
+}
+
+.chapitres:hover {
+	color: darkred;
+	background-color: rgb(240, 195, 0);
+	border-left: solid 5px darkred;
+}
+
+.chapitres:hover a {
+	color: darkred;
+}
+
+.chapitres:hover a:hover {
+	color: rgb(0, 139, 116);
+}
+
+.chapitres table {
+	width: 100%;
+}
+
+.chapitres table .mid {
+	text-align: center;
+}
+
+.chapitres table .right {
+	text-align: right;
+}
+
+.chapitres table td {
+	width: 33%;
+}
+
+.fakea {
+	background: none;
+	color: #add8e6;
+	font-family: "Futura";
+	border: none;
+	font-size: 20px;
+	padding: 0;
+	margin: 0;
+}
+
+.fakea:hover {
+	cursor: pointer;
+	color: rgb(240, 195, 0);
+}
+
+.infos a {
+	color: white;
+}
+
+.contenu {
+	position: absolute;
+	opacity: 0;
+}
+
+.container-onglets {
+	display: flex;
+}
+
+.onglets {
+	border: solid 0px white;
+	background-color: #232b2b;
+	text-decoration: none;
+	text-align: center;
+	color: white;
+	font-size: 20px;
+	display: inline-block;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	width: 50%;
+	margin: 0px;
+	font-family: "Futura";
+	letter-spacing: 1px;
+}
+
+.onglets:hover {
+	color: darkred;
+	background-color: rgb(240, 195, 0);
+	cursor: pointer;
+}
+
+.activeo {
+	background: rgb(31, 74, 153);
+	color: white;
+	transition: all 0.3s ease;
+}
+
+.activecontenu {
+	animation: fade 0.0s forwards;
+}
+
+@keyframes fade {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+.timeline{
+	display:none;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+}
+.genealogie{
+	display:none;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+}
+.fille{
+	background-color: #be87a9;
+	padding: 20px;
+	text-align: center;
+	font-size: 20px;
+	border: solid rgb(190, 10, 175) 3px;
+}
+.fille a{
+	text-decoration: none;
+}
+.fille a:hover{
+	color: darkred;
+	cursor:pointer;
+}
+.garçon{
+	background-color: #6cd6dd;
+	padding: 20px;
+	text-align: center;
+	font-size: 20px;
+	border: solid rgb(2, 55, 80) 3px;
+}
+.garçon a{
+	text-decoration: none;
+	color: rgb(3, 67, 119);
+}
+.garçon a:hover{
+	color: darkred;
+	cursor:pointer;
+}
+.fillebas{
+	background-color: #be87a9;
+	padding: 20px;
+	text-align: center;
+	font-size: 20px;
+	border: solid rgb(190, 10, 175) 3px;
+}
+.fillebas a{
+	text-decoration: none;
+}
+.rotate{
+	transform: rotate(90deg);
+}
+.notrotate{
+	transform: rotate(90deg);
+}
+.descente{
+	display:flex;
+	flex-direction: column;
+	margin-top: 80px;
+}
+.fillebas a:hover{
+	color: darkred;
+	cursor:pointer;
+}
+.famille{
+	display:flex;
+	flex-direction: row;
+	align-items: center;
+}
+.parent hr{
+	width: 25px; height: 1px; border: solid 1px rgb(255, 255, 255);
+	transform:rotate(90deg)
+}
+.bas{
+	margin-top : 88px;
+}
+hr{
+	width: 25px; height: 1px; border: solid 1px rgb(255, 255, 255);
+}
+.livrekrysto{
+	background-color: #D8BFD8;
+	padding: 20px;
+	text-align: center;
+	font-size: 20px;
+	border: solid purple 3px;
+}
+.livrekrysto a{
+	text-decoration: none;
+}
+.livrekrysto a:hover{
+	color: darkred;
+	cursor:pointer;
+}
+.livredf{
+	background-color: #cca7a7;
+	padding: 20px;
+	text-align: center;
+	font-size: 20px;
+	border: solid rgb(80, 5, 2) 3px;
+}
+.livredf a{
+	text-decoration: none;
+	color: rgb(190, 10, 10);
+}
+.livredf a:hover{
+	color: darkred;
+	cursor:pointer;
+}
+.livrespinoff{
+	background-color: #6cdd6c;
+	padding: 20px;
+	text-align: center;
+	font-size: 20px;
+	border: solid rgb(2, 80, 19) 3px;
+}
+.livrespinoff a{
+	text-decoration: none;
+	color: rgb(10, 112, 24);
+}
+.livrespinoff a:hover{
+	color: darkred;
+	cursor:pointer;
+}
+.livredf{
+	background-color: #6cd6dd;
+	padding: 20px;
+	text-align: center;
+	font-size: 20px;
+	border: solid rgb(2, 55, 80) 3px;
+}
+.livredf a{
+	text-decoration: none;
+	color: rgb(3, 67, 119);
+}
+.livredf a:hover{
+	color: darkred;
+	cursor:pointer;
+}
+.timeline hr{
+	width: 25px; height: 1px; border: solid 1px rgb(255, 255, 255);
+	transform:rotate(90deg);
+}
+.genealogie ul{
+	list-style: none;
+}
+.genealogie img{
+	max-width: 1000px;
+}
