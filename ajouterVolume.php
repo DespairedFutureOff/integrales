@@ -8,30 +8,30 @@ $id = $_POST['id'];
 // Chemin vers le fichier JSON
 $cheminFichierJSON = 'data/volumes.json';
 if($num !== ''){
-    // Vérifier si le fichier a été téléversé sans erreur
-    if (isset($_FILES["overlay"]) && $_FILES["overlay"]["error"] == 0) {
-        $allowed_types = array("image/jpeg", "image/png", "image/gif");
-        $max_size = 5 * 1024 * 1024; // 5 MB (en bytes)
+    // // Vérifier si le fichier a été téléversé sans erreur
+    // if (isset($_FILES["overlay"]) && $_FILES["overlay"]["error"] == 0) {
+    //     $allowed_types = array("image/jpeg", "image/png", "image/gif");
+    //     $max_size = 5 * 1024 * 1024; // 5 MB (en bytes)
 
-        // Vérifier le type et la taille du fichier
-        if (in_array($_FILES["overlay"]["type"], $allowed_types) && $_FILES["overlay"]["size"] <= $max_size) {
-            // Déplacer le fichier téléversé vers le dossier de destination sur le serveur
-            $target_dir = "img/";
-            $target_file = $target_dir . basename($_FILES["overlay"]["name"]);
+    //     // Vérifier le type et la taille du fichier
+    //     if (in_array($_FILES["overlay"]["type"], $allowed_types) && $_FILES["overlay"]["size"] <= $max_size) {
+    //         // Déplacer le fichier téléversé vers le dossier de destination sur le serveur
+    //         $target_dir = "img/";
+    //         $target_file = $target_dir . basename($_FILES["overlay"]["name"]);
 
-            if (move_uploaded_file($_FILES["overlay"]["tmp_name"], $target_file)) {
-                echo "L'image a été téléversée avec succès.";
-                // Vous pouvez enregistrer le chemin $target_file dans une base de données si nécessaire
-                $overlay = $target_file;
-            } else {
-                echo "Désolé, une erreur s'est produite lors du téléversement de l'image.";
-            }
-        } else {
-            echo "Le type de fichier n'est pas autorisé ou le fichier est trop volumineux.";
-        }
-    } else {
-        echo "Aucune image téléversée ou une erreur s'est produite.";
-    }
+    //         if (move_uploaded_file($_FILES["overlay"]["tmp_name"], $target_file)) {
+    //             echo "L'image a été téléversée avec succès.";
+    //             // Vous pouvez enregistrer le chemin $target_file dans une base de données si nécessaire
+    //             $overlay = $target_file;
+    //         } else {
+    //             echo "Désolé, une erreur s'est produite lors du téléversement de l'image.";
+    //         }
+    //     } else {
+    //         echo "Le type de fichier n'est pas autorisé ou le fichier est trop volumineux.";
+    //     }
+    // } else {
+    //     echo "Aucune image téléversée ou une erreur s'est produite.";
+    // }
 
 
     // Lire le contenu actuel du fichier JSON

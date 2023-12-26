@@ -3,6 +3,13 @@
         "id": "alpha flight",
         "overlay": "\/img\/8146lmQIpsL._AC_UF1000,1000_QL80_.jpg",
         "link": "alpha-flight",
-        "volumes": []
+        "volumes": [
+            {
+                "num": "1",
+                "sortie": "24\/03\/2021",
+                "overlay": "https:\/\/www.panini.fr\/media\/catalog\/product\/cache\/968d306fb1cf333067a665f96384b6e4\/f\/a\/falpi001_0.jpg",
+                "date": "1978-1984"
+            }
+        ]
     }
 ]
