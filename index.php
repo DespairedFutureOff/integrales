@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stats de Foot</title>
+    <title>Intégrales Marvel</title>
     <link rel="icon" type="image/png" sizes="16x16" href="img/icon.png">
 </head>
 
@@ -34,7 +34,7 @@
     <footer>
         <section class="menu">
             <span class="logopad"><img class="logo2" src="img/logo.png" /></span>
-            <nav>
+            <!-- <nav>
                 <section class="navbar2">
                     <a href="remerciements.html">Remerciements</a>
                     <a class="nope">•</a>
@@ -44,7 +44,7 @@
                     <a class="nope">•</a>
                     <a href="contact.html">Contact</a>
                 </section>
-            </nav>
+            </nav> -->
         </section>
     </footer>
 </body>
